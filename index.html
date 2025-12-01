@@ -285,51 +285,13 @@ p, li, td { font-size: 11pt; line-height: 1.5; }
     margin-bottom: 5px;
 }
 
-/* ESTILOS PARA EL BOTÓN FLOTANTE (SOLO WEB) */
-.print-fab {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #ffbb00;
-    color: #004d6b;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.print-fab:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-}
-
-.print-fab:active {
-    transform: translateY(0);
-}
-
 @media print {
     body { background: none; padding: 0; gap: 0; }
     .page { box-shadow: none; margin: 0; page-break-after: always; height: auto; min-height: 297mm; }
-    /* Ocultar elementos no imprimibles */
-    .print-fab { display: none !important; }
 }
 </style>
 </head>
 <body>
-
-<!-- BOTÓN FLOTANTE PARA DESCARGAR (VISIBLE SOLO EN WEB) -->
-<button class="print-fab" onclick="window.print()" title="Imprimir o Guardar como PDF">
-    <i class="fa-solid fa-file-pdf"></i> Descargar / Imprimir PDF
-</button>
 
 <!-- PÁGINA 1: PORTADA -->
 <div class="page">
